@@ -14,7 +14,11 @@ Fetches and creates versioned GitHub resources.
 
 * `access_token`: *Optional.* Used for accessing a release in a private-repo
    during an `in` and pushing a release to a repo during an `out`. The access
-   token you create is only required to have the `repo` or `public_repo` scope.
+   token you create for `in` is only required to have the `repo` or `public_repo` scope.
+   Used for accessing a release in a private-repo to get a release for a public-repo 
+   during an `out`. The access token you create for `out` shoud not have `any` scope
+   else will be rate limited to 60 "X-RateLimit-Limit": "60".
+   
 
 * `github_api_url`: *Optional.* If you use a non-public GitHub deployment then
   you can set your API URL here.
